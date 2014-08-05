@@ -7,10 +7,10 @@ import java.util.StringTokenizer;
 
 /**
  * Codeforces.com 
- * Round 258
+ * Round # 
  * Division 2
- * Problem B
- * @author Edward McEnrue, [Potential Friendly coder helper1], [Potential Friendly coder helper2]
+ * Problem [letter]
+ * @author Edward McEnrue, [Potential Friendly Stranger1], [Potential Friendly Stranger2]
  *
  */
 public class CF258_PredictOutcomeOfGame {

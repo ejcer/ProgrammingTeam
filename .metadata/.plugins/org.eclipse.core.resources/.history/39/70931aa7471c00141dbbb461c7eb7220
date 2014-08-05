@@ -5,14 +5,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-/**
- * Codeforces.com 
- * Round 258
- * Division 2
- * Problem B
- * @author Edward McEnrue, [Potential Friendly coder helper1], [Potential Friendly coder helper2]
- *
- */
+
 public class CF258_PredictOutcomeOfGame {
 
 	public static void main(String[] args) {

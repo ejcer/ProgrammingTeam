@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * Round 230
  * Division 2
  * Problem A
- * @author Edward McEnrue, [Potential Friendly Stranger1], [Potential Friendly Stranger2]
+ * @author Edward McEnrue
  *
  */
 public class CF230_Nineteen 

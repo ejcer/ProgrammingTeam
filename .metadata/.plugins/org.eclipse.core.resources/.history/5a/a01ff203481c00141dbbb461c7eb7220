@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * Round 258
  * Division 2
  * Problem B
- * @author Edward McEnrue, [Potential Friendly coder helper1], [Potential Friendly coder helper2]
+ * @author Edward McEnrue, [Potential Friendly coder hero1], [Potential Friendly coder hero2]
  *
  */
 public class CF258_PredictOutcomeOfGame {
