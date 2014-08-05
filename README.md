@@ -7,7 +7,9 @@ This is a collection of programming problems I have done for various online judg
 * https://topcoder.com
 * https://icpcarchive.ecs.baylor.edu/
 * http://uva.onlinejudge.org/
+
 and
+
 * https://codeforces.com
 
 in order to improve my skills for DSA and math based CS problems. 
