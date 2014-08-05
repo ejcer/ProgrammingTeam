@@ -1,22 +1,69 @@
-package Utilities;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+
 /**
  * Codeforces.com 
- * Round # 
+ * Round 230
  * Division 2
- * Problem [letter]
+ * Problem A
  * @author Edward McEnrue, [Potential Friendly Stranger1], [Potential Friendly Stranger2]
  *
  */
-public class IO_Template {
-
+public class CF230_Nineteen 
+{
 	public static void main(String[] args) {
 		MyScanner in = new MyScanner();
+		
+		char[] s = in.next().toCharArray();
+		
+		int nCnt = 0; 
+		int iCnt = 0; 
+		int eCnt = 0; 
+		int tCnt = 0; 
+		for(int i = 0; i < s.length; i++)
+		{
+			if(s[i] == 'n')
+			{
+				nCnt++;
+			}
+			else if(s[i] == 'i')
+			{
+				iCnt++;
+			}
+			else if(s[i] == 'e')
+			{
+				eCnt++;
+			}
+			else if(s[i] == 't')
+			{
+				tCnt++;
+			}
+		}
+		
+		if(nCnt < 5)
+		{
+			nCnt = (int) Math.floor(nCnt/3); 
+		}
+		else
+		{
+			if(nCnt%2 == 0)
+			{
+				nCnt = ((int) Math.floor(nCnt/2))-1; //7/2.5 ninetee //27
+			}
+			else
+			{
+				nCnt = ((int) Math.floor(nCnt/2))
+			}
+		}
+		eCnt = (int) Math.floor(eCnt/3); 
+		
+		System.out.println(Math.min(nCnt, Math.min(iCnt, Math.min(eCnt, tCnt))));
+		
+		
+		
 
 	}
 
