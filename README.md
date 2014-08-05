@@ -15,6 +15,9 @@ and
 in order to improve my skills for DSA and math based CS problems. 
 
 ## Want to Help me become a better programmer?
+
+First off, you're awesome for that.
+
 Send me a message about how I could improve my coding style or my CS problem solving skills.
 
 **OR** help me solve the problems that I didn't get to finish which are located outside each package's respective 'completed' folder.
