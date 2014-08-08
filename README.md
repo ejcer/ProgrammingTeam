@@ -7,6 +7,9 @@ This is a collection of programming problems I have done for various online judg
 * https://topcoder.com
 * https://icpcarchive.ecs.baylor.edu/
 * http://uva.onlinejudge.org/
+* http://www.spoj.com/
+* https://www.hackerrank.com/
+* http://coderbyte.com/CodingArea/Challenges/
 
 and
 
