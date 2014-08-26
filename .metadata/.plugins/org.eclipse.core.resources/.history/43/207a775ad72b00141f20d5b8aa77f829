@@ -1,0 +1,119 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+
+/**
+ * Codeforces.com 
+ * Round TeamWarmUp
+ * Division 2
+ * Problem A
+ * @author Edward McEnrue
+ *
+ */
+public class CFTeamWarmUp_Hash_Collisions {
+
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int n = in.nextInt();
+		String str = in.nextLine();
+		
+		System.out.println("jbdedhib".hashCode());
+		System.out.println("cakgeahh".hashCode());
+		System.out.println("");
+		System.out.println("jb".hashCode());
+		System.out.println("ca".hashCode());
+		
+//		String stop = perm("", str, str, "");
+//		String ans = perm("", str, str, stop);
+//		
+//		if(stop != null && ans != null)
+//		{
+//			System.out.println(stop);
+//			System.out.println(ans);
+//		}
+//		else
+//		{
+//			System.out.println("gg no re");
+//		}
+
+		
+		
+		
+		
+	}
+	
+	private static String perm(String prefix, String str, String orig, String falseStop)
+	{
+		int n = str.length();
+		if(n == 0)
+		{
+			System.out.println(prefix);
+			if(prefix.hashCode() == orig.hashCode() && !prefix.equals(falseStop))
+			{
+				return prefix;
+				
+			}
+		}
+		else
+		{
+			for(int i = 0; i < n; i++)
+			{
+				perm(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, n), orig, falseStop);
+			}
+		}
+		return null;
+	}
+	
+	
+	
+	
+	
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}

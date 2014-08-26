@@ -11,7 +11,6 @@ import java.util.StringTokenizer;
  * Division 2
  * Problem [letter]
  * @author Edward McEnrue, [Potential Friendly coder helper1], [Potential Friendly coder helper2]
- *
  */
 public class IO_Template {
 

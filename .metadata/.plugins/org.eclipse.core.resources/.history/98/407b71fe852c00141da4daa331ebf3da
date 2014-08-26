@@ -1,0 +1,122 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+
+/**
+ * Codeforces.com 
+ * Round TeamWarmUp
+ * Division 2
+ * Problem B
+ * @author Edward McEnrue
+ *
+ */
+public class CFTeamWarmUp_Canonical_Cycle_Representation {
+
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int n = in.nextInt();
+		int[] arr = new int[n];
+		for(int i = 0; i < n; i++)
+		{
+			arr[i] = in.nextInt();
+		}
+		
+		ArrayList<ArrayList<Integer>> arrHolder = new ArrayList<ArrayList<Integer>>();
+		
+		int setVar = arr[0];
+		
+		for(int i = 0; i < n; i++)
+		{
+			setVar = arr[i];
+			if(setVar != -1)
+			{
+				int hopVar = arr[i];
+				ArrayList<Integer> setArr = new ArrayList<Integer>();
+				arr[i] = -1;
+				while(hopVar != -1)
+				{
+					System.out.println(hopVar);
+					
+					setArr.add(hopVar);
+					hopVar = arr[hopVar-1];
+					arr[hopVar-1] = -1;
+					if(hopVar == -1 && setArr.size() != 1) //might not need the check for -1 here
+					{
+						arrHolder.add(setArr);
+					}
+					
+				}
+			}
+		}
+//		System.out.println(arrHolder.size());
+		
+		for(int i = 0; i < arrHolder.size(); i++)
+		{
+			for(int j = 0; j < arrHolder.get(i).size(); j++)
+			{
+				System.out.print(arrHolder.get(i).get(j) + " ");
+			}
+		}
+	}
+	
+//	private static void set(int start, int prev, ArrayList<Integer> num)
+//	{
+//		System.out.print(num.get(start));
+//		if(start> prev)
+//		{
+//			num.remove(start);
+//			set(num.get(start-1), start, num);
+//			
+//		}
+//		
+//	}
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}
