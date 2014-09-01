@@ -4,13 +4,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-/**
- * Vjudge.net
- * Round 1
- * Division 2
- * Problem C
- * @author Edward McEnrue
- */
+
 public class VJ1_Close_Enough_Computations {
 
 	public static void main(String[] args) {
@@ -52,7 +46,7 @@ public class VJ1_Close_Enough_Computations {
 			}
 			else
 			{
-				System.out.println("no");
+				System.out.println("no")
 			}
 			
 		} while( c != 0 || f != 0 || carb != 0 || p != 0);

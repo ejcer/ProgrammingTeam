@@ -9,13 +9,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 
-/**
- * Vjudge.net
- * Round 1
- * Division 2
- * Problem A
- * @author Edward McEnrue
- */
+
 public class VJ1_First_Composed_Then_Transposed {
 
 	public static void main(String[] args) {
