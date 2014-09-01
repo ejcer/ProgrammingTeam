@@ -3,22 +3,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+
 /**
- * for testing stuff like modulo on the fly;
- * @author emcenrue
- *
+ * Vjudge.net
+ * Round 1
+ * Division 2
+ * Problem A
+ * @author Edward McEnrue
  */
-public class JavaFunctionTest {
+public class VJ1_First_Composed_Then_Transposed_With_Switch_Case {
 
 	public static void main(String[] args) {
 		MyScanner in = new MyScanner();
-		
-		for(int i = -100; i < 100; i++)
-		{
-			System.out.println(i + " % " + 12 + " = "+i%12);
-		}
-		
 
+		
+		
 	}
 
 	// -----------MyScanner class for faster input----------

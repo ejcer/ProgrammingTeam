@@ -116,11 +116,6 @@ public class VJ1_First_Composed_Then_Transposed_With_Switch_Case {
 				
 				pos = pos % 12;
 				
-				if(pos < 0)
-				{
-					pos = 12+pos;
-				}
-				
 				pos = Math.abs(pos);
 				
 				
@@ -176,7 +171,6 @@ public class VJ1_First_Composed_Then_Transposed_With_Switch_Case {
 				
 			}
 			
-			System.out.println("");
 			
 			s = in.nextLine();
 			if(!s.equals("***"))

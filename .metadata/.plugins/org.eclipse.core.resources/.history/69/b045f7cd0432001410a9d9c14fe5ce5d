@@ -13,11 +13,7 @@ public class JavaFunctionTest {
 	public static void main(String[] args) {
 		MyScanner in = new MyScanner();
 		
-		for(int i = -100; i < 100; i++)
-		{
-			System.out.println(i + " % " + 12 + " = "+i%12);
-		}
-		
+		System.out.println(-1%12);
 
 	}
 

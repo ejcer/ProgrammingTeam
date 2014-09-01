@@ -116,67 +116,9 @@ public class VJ1_First_Composed_Then_Transposed_With_Switch_Case {
 				
 				pos = pos % 12;
 				
-				if(pos < 0)
-				{
-					pos = 12+pos;
-				}
-				
-				pos = Math.abs(pos);
-				
-				
-				if(pos == 0)
-				{
-					System.out.print("A ");
-				}
-				else if(pos == 1)
-				{
-					System.out.print("A# ");
-				}
-				else if(pos == 2)
-				{
-					System.out.print("B ");
-				}
-				else if(pos == 3)
-				{
-					System.out.print("C ");
-				}
-				else if(pos == 4)
-				{
-					System.out.print("C# ");
-				}
-				else if(pos == 5)
-				{
-					System.out.print("D ");
-				}
-				else if(pos == 6)
-				{
-					System.out.print("D# ");
-				}
-				else if(pos == 7)
-				{
-					System.out.print("E ");
-				}
-				else if(pos == 8)
-				{
-					System.out.print("F ");
-				}
-				else if(pos == 9)
-				{
-					System.out.print("F# ");
-				}
-				else if(pos == 10)
-				{
-					System.out.print("G ");
-				}
-				else if(pos == 11)
-				{
-					System.out.print("G# ");
-				}
-				
-				
+				//A A# B C C# D D# E F F# G G#
 			}
 			
-			System.out.println("");
 			
 			s = in.nextLine();
 			if(!s.equals("***"))
