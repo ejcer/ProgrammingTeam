@@ -15,6 +15,9 @@ import java.util.StringTokenizer;
  */
 public class CFTeamWarmUp_GPS_Routing_Small {
 
+	
+	//read handbook
+	
 //	/**
 //	 * 
 //	 * @author emcenrue
@@ -34,7 +37,7 @@ public class CFTeamWarmUp_GPS_Routing_Small {
 		int y;
 		String name;
 		ArrayList<Edge> roads = new ArrayList<Edge>();
-		double distance = Double.POSITIVE_INFINITY; //This helps with d's algo as it changes this var to be the dist from src along a path.
+		double shortestDistance = Double.POSITIVE_INFINITY; //This helps with d's algo as it changes this var to be the dist from src along a path.
 		boolean visited = false;//This also helps with d's algo and checking if the node/vertex/town has been visited.
 		
 
@@ -51,11 +54,11 @@ public class CFTeamWarmUp_GPS_Routing_Small {
 		}
 		
 		public double getDistance() {
-			return distance;
+			return shortestDistance;
 		}
 
 		public void setDistance(double distance) {
-			this.distance = distance;
+			this.shortestDistance = distance;
 		}
 
 		public boolean isVisited() {

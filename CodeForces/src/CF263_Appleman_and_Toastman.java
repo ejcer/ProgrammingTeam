@@ -2,6 +2,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
@@ -15,6 +16,38 @@ public class CF263_Appleman_and_Toastman {
 
 	public static void main(String[] args) {
 		MyScanner in = new MyScanner();
+		
+		int n = in.nextInt();
+		
+		int[] arr = new int[n];
+		
+		long total = 0;
+		
+		for(int i = 0; i < n; i++)
+		{
+			arr[i] = in.nextInt();
+			total += (long) arr[i]; //9
+		}
+		
+		
+		Arrays.sort(arr);
+		
+		long leftOver = total;
+		
+		for(int i = 0; i < n-1; i++)
+		{
+			total += leftOver; //1*0 3*1 5*2 -> 22
+			// 1 3 5 --> 9
+			// 3 5 --> 8
+			
+			leftOver -= arr[i];
+			
+			
+		}
+		
+		System.out.println(total);
+		
+		
 
 	}
 
