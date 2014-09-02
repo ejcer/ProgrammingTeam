@@ -17,6 +17,8 @@ public class ISoar {
 			// Scanner reads input
 			Scanner in = new Scanner(System.in);
 
+			//Sorting left to right
+			
 			// Main loop
 			while (true) {
 

@@ -16,35 +16,20 @@ public class VJ1_Close_Enough_Computations {
 	public static void main(String[] args) {
 		MyScanner in = new MyScanner();
 		
-		double c;
-		double f;
-		double carb;
-		double p;
-		
-		do{
-			c = in.nextDouble();
-			f = in.nextDouble();
-			carb = in.nextDouble();
-			p = in.nextDouble();
+		double c = in.nextDouble();
+		double f = in.nextDouble();
+		double carb = in.nextDouble();
+		double p = in.nextDouble();
+		while( c != 0 || f != 0 || carb != 0 || p != 0)
+		{
 			
-			double max = Math.round((f+.49999999)*9+(carb+.49999999)*4+(p+.49999999)*4);
 			
-			double min = 0;
+			double max = (f+.49999999)*9+(carb+.49999999)*4+(p+.49999999)*4;
 			
-			if(f >= .49999999)
-			{
-				min += (f-.49999999)*9;
-			}
-			if(carb >= .49999999)
-			{
-				min += (carb-.49999999)*4;
-			}
-			if(p >= .49999999)
-			{
-				min += (p-.49999999)*4;
-			}
+			double min = Math.max(f-.4999999, 0)*9 + Math.max(carb-.499999, 0)*4 + Math.max(p-.4999999, 0)*4;
 			
-			min = Math.round(min);
+			
+			
 			
 			if(c >= min && c <= max)
 			{
@@ -54,8 +39,14 @@ public class VJ1_Close_Enough_Computations {
 			{
 				System.out.println("no");
 			}
+			c = in.nextDouble();
+			f = in.nextDouble();
+			carb = in.nextDouble();
+			p = in.nextDouble();
+		}
 			
-		} while( c != 0 || f != 0 || carb != 0 || p != 0);
+			
+		
 
 	}
 
