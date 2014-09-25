@@ -1,0 +1,154 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+
+/**
+ * Codeforces.com 
+ * Round 3 
+ * Division 2
+ * Problem B
+ * @author Edward McEnrue
+ */
+public class Minesweeper 
+{
+	
+			
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int r = in.nextInt();
+		int c = in.nextInt();
+		while(r != 0 || c != 0)
+		{
+		int[][] map = new int[r][c];
+		
+		for(int i = 0; i < r; i++)
+		{
+			String row = in.nextLine();
+			for(int j = 0; j < c; j++)
+			{
+				if(row.charAt(j) == '*')
+				{
+					map[r][c] = -1;
+				}
+				else
+				{
+					map[r][c] = 0;
+				}
+			}
+		}
+		
+		for(int i = 0; i < r; i++)
+		{
+			for(int j = 0; j < c; j++)
+			{
+				if(map[r][c] != -1)
+				{
+					if(i > 0 && map[r][c-1] == -1)
+					{
+						map[r][c]++;
+					}
+					if(j > 0 && map[r-1][c] == -1)
+					{
+						map[r][c]++;
+					}
+					if(j > 0 && i > 0 && map[r-1][c-1] == -1)
+					{
+						map[r][c]++;
+					}
+					if(j > 0 && i < r-1 && map[r+1][c-1] == -1)
+					{
+						map[r][c]++;
+					}
+					if(j < c-1 && i > 0 && map[r-1][c+1] == -1)
+					{
+						map[r][c]++;
+					}
+					if(j < c-1 && map[r][c+1] == -1)
+					{
+						map[r][c]++;
+					}
+					if(j < c-1 && i < r-1 && map[r+1][c+1] == -1)
+					{
+						map[r][c]++;
+					}
+					if(i < r-1 && map[r+1][c] == -1);
+					{
+						map[r][c]++;
+					}
+					//* * *
+					//*   *
+					//*   *
+				}
+			}
+		}
+		
+		
+		for(int i = 0; i < r; i++)
+		{
+			for(int j = 0; j < c; j++)
+			{
+				if(map[r][c] == -1)
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.println(map[r][c]);
+				}
+			}
+			System.out.println("");
+		}
+		
+		r = in.nextInt();
+		c = in.nextInt();
+		}
+	}
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}

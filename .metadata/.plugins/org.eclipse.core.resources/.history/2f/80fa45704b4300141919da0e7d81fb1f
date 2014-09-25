@@ -1,0 +1,12 @@
+/**
+ * Codeforces.com 
+ * Round 3
+ * Division 2
+ * Problem D
+ * @author Edward McEnrue
+ */
+public class Balloons {
+
+	//sort based on difference of teams distance to room in order to get worst ones first
+	//then go through array of distances and subtract one balloon at a time
+}

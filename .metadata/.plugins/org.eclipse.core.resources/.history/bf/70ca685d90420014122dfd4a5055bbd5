@@ -1,0 +1,131 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+/**
+ * Codeforces.com 
+ * Round 3
+ * Division 2
+ * Problem B
+ * @author Edward McEnrue
+ */
+public class Minesweeper_Alt 
+{
+
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int r = in.nextInt();
+		int c = in.nextInt();
+		
+		while(r != 0 || c != 0)
+		{
+			char[][] m = new char[r][c];
+			
+			for(int i = 0; i < r; i++)
+			{
+				String row = in.nextLine();
+				for(int j = 0; j < c; j++)
+				{
+					m[r][c] = row.charAt(j);
+				}
+			}
+			
+			int[][] im = new int[r][c];
+			for(int k = 0; k < r; k++)
+			{
+				for(int l = 0; l < c; l++)
+				{
+					if(m[k][l] == '.')
+					{
+						if(k > 0 && l > 0 && m[k-1][l-1] == '*')
+							im[k][l]++;
+						else if(k < r-1 && l < c-1 && m[k+1][l+1] == '*')
+							im[k][l]++;
+						else if(k > 0 && l < c-1 && m[k-1][l+1] == '*')
+							im[k][l]++;
+						else if(k < r-1 && l > 0 && m[k+1][l-1] == '*')
+							im[k][l]++;
+						else if(k > 0 && m[k-1][l] == '*')
+							im[k][l]++;
+						else if(l > 0 && m[k][l-1] == '*')
+							im[k][l]++;
+						else if(k < r-1 && m[k+1][l] == '*')
+							im[k][l]++;
+						else if(l < c-1 && m[k][l+1] == '*')
+							im[k][l]++;
+					}
+					else
+					{
+						im[k][l] = -10;
+					}
+				}
+			}
+			for(int z = 0; z < r; z++)
+			{
+				for(int a = 0; a < c; a++)
+				{
+					if(im[z][a] == -10)
+					{
+						System.out.print('*');
+					}
+					else
+					{
+						System.out.print(im[z][a]);
+					}
+					
+				}
+				System.out.println("");
+			}
+		}
+		
+		
+
+	}
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}
