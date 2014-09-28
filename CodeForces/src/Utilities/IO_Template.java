@@ -4,6 +4,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * Codeforces.com 
+ * Round # 
+ * Division 2
+ * Problem [letter]
+ * @author Edward McEnrue, [Potential Friendly coder helper1], [Potential Friendly coder helper2]
+ */
 public class IO_Template {
 
 	public static void main(String[] args) {
