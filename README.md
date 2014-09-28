@@ -12,7 +12,7 @@ This is a collection of programming problems I have done for various online judg
 * http://coderbyte.com/CodingArea/Challenges/
 
 and
-
+ 
 * https://codeforces.com
 
 in order to improve my skills for DSA and math based CS problems. 
@@ -27,6 +27,5 @@ Send me a message about how I could improve my coding style or my CS problem sol
 
 Thanks!
 
-## Contact
+ ## Contact
 - edward.mcenrue@gmail.com
-
