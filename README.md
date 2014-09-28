@@ -1,12 +1,31 @@
-##What is Motivatr?
+This is a collection of programming problems I have done for various online judges like:
 
-Motivatr is an android, chrome extension hybrid productivity application. It is the only application available that analyzes user internet usage and serves high quality motivational content at the right time to break cycles of procrastination and distraction. Motivatr also serves as a network for high quality motivational content and features a motivational alarm clock and a motivational background animation. Motivatr is the product of developers committed to the vision of a smart application with the true ability to motivate anyone, anywhere, anytime.
+* https://codeforces.com
+* https://codeforces.com
+* https://codility.com 
+* https://codechef.com
+* https://topcoder.com
+* https://icpcarchive.ecs.baylor.edu/
+* http://uva.onlinejudge.org/
+* http://www.spoj.com/
+* https://www.hackerrank.com/
+* http://coderbyte.com/CodingArea/Challenges/
 
+and
+ 
+* https://codeforces.com
 
-This is the main repository for Motivatr's android development team. Send Edward McEnrue, edward.mcenrue@gmail.com, an email for clarifications or help with getting up and running with Motivatr android development.
+in order to improve my skills for DSA and math based CS problems. 
 
-Thank you!
+## Want to Help me become a better programmer?
 
-## Contact
-- motivatrapp@gmail.com
+First off, you are awesome for that.
 
+Send me a message about how I could improve my coding style or my CS problem solving skills.
+
+**OR** help me solve the problems that I didn't get to finish which are located outside each package's respective 'completed' folder.
+
+Thanks!
+
+ ## Contact
+- edward.mcenrue@gmail.com
