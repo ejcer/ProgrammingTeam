@@ -73,76 +73,49 @@ public class Flip_Five {
 	 * -------------------------------------------------------------------
 	 */
 	static void solve(State start) {
-		
-	    Set<State> visited = new HashSet<State>(); // has this state been visited?                  
-	    
-	    Map<State, State> pred = new HashMap<State, State>(); // predecessor on the shortest path to the start state      
-	    
-	    Map<State, Integer> dist = new HashMap<State, Integer>(); // shortest distance from start state  
-	    
+	    Set<State> visited = new HashSet<State>();                  
+	    // has this state been visited?
+	    Map<State, State> pred = new HashMap<State, State>();       
+	    // predecessor on the shortest path to the start state
+	    Map<State, Integer> dist = new HashMap<State, Integer>();   
+	    // shortest distance to start state
 	    Deque<State> bfs = new ArrayDeque<State>(); 
-	    bfs.offer(start); // Put the starting state into the Breadth First Search queue to be analyzed.
-	    dist.put(start, 0); // Initialize the starting state to have 0 distance from start, and put it in the shortest distance map.
+	    bfs.offer(start);
+	    dist.put(start, 0);
 	    
 	    int min = Integer.MAX_VALUE; //=========ADDED4FLIPFIVE==========
 
-	    /**
-	     * Runs while the size of the breadth first search queue has not been expended of new possible states
-	     */
 	    while (bfs.size() > 0) {
-	        State s = bfs.poll(); // Gets the first element to be put into the queue (or the most recently put in)
-	        int n = dist.get(s); // Gets the distance of that first element
-	        visited.add(s); // Adds this element's hashCode to the set of visited states, effectively ignoring it later on.
+	        State s = bfs.poll();
+	        int n = dist.get(s);
+	        visited.add(s);
 	        
 
-	        // If this state matches the target solution state then figure out the distance to it
 	        if (s.isFinal()) {
 	        	
-	        	//I don't think this if statement is necessary
 	        	if(n < min) //=========ADDED4FLIPFIVE==========
 	        	{
 	        		min = n;
-	        		//output(n, s, pred); //=========UNUSED4FLIPFIVE==========
 	        	}
 	        	break;
 	        }
 
-	        // For all possible successors of the state most recently taken from the head of the breadth first search queue
 	        for (State succ : s.successors()) {
-	            if (visited.contains(succ)) // Check if a successor has already been visited, if it has go to the next successor
+	            if (visited.contains(succ))
 	                continue;
 
-	            // The state hasn't been visited yet
-	            if (!pred.containsKey(succ)) // The state is not already in predecessors 
-	                pred.put(succ, s); // Put the successor state into the predecessor state with the current state as the predecessor
-	            
-	            if (!dist.containsKey(succ)) { // The state's distance from start hasn't been recorded yet in the distance map.
-	                dist.put(succ, n+1); // Put the successor state into the distance from start map with 1+distance from current state.
-	                bfs.offer(succ); // Queue up the successor state to be analyzed once the breadth first search queue reaches it.
+	            if (!pred.containsKey(succ)) //this is why you need hashcode
+	                pred.put(succ, s);
+
+	            if (!dist.containsKey(succ)) {
+	                dist.put(succ, n+1);
+	                bfs.offer(succ);
 	            }
 	        }
 	    }
 	    
 	    System.out.println(""+min); //=========ADDED4FLIPFIVE==========
 	}
-	
-	//=========UNUSED4FLIPFIVE==========
-	/* Compute and output path */
-	void output(int distToSolution, State finalState, Map<State, State> pred) {
-	    System.out.println("The distance to the solution is: " + distToSolution);
-
-	    List<State> revPath = new ArrayList<State>();
-	    State s = finalState; // The target solution state
-	    while (pred.containsKey(s)) {
-	        revPath.add(s);
-	        s = pred.get(s);
-	    }
-	    revPath.add(s); // The starting state, since the BFS solve() method doesn't ever add the first start state to pred
-
-	    for (int i = 0; i < revPath.size(); i++) {
-	        System.out.printf("%3d %s%n", i, revPath.get(revPath.size() - 1 - i));
-	    }
-	} //=========UNUSED4FLIPFIVE==========
 	
 	
 	/**
@@ -151,7 +124,7 @@ public class Flip_Five {
 	 * 
 	 * State is actually another name for a node.
 	 * 
-	 * State must implement equals(), hashCode(), isFinal(), and successors()
+	 * State must implement equals(), hashCode(), ifFinal(), and successors()
 	 * for any BFS problem
 	 * ------------------------------------------------------
 	 * @author emcenrue
@@ -160,10 +133,6 @@ public class Flip_Five {
 	{
 		char[][] flipBoard;
 		
-		/**
-		 * Instantiates a board with a given 3x3 configuration of chars
-		 * @param fb
-		 */
 		public State(char[][] fb)
 		{
 			flipBoard = new char[3][3];
@@ -177,9 +146,6 @@ public class Flip_Five {
             }
 		}
 		
-		/**
-		 * Checks to see if two board's cell configurations are the same
-		 */
 		@Override
 		public boolean equals(Object o)
 		{
@@ -219,10 +185,8 @@ public class Flip_Five {
             return flipBoard;
         }
 		
-		/**
+		/*
 		 * Flips the board based on the coordinates given
-		 * @param x coordinate of the click on the flip board
-		 * @param y coordinate of the click on the flip board
 		 */
 		public void flip(int x, int y)
 		{

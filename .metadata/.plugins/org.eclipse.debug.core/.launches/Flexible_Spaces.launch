@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/VJudge/src/Flexible_Spaces.java"/>
+<listEntry value="/VJudge/src/Complete/Flexible_Spaces.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Flexible_Spaces"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Complete.Flexible_Spaces"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="VJudge"/>
 </launchConfiguration>

@@ -137,7 +137,7 @@ public class Flip_Five {
 	        revPath.add(s);
 	        s = pred.get(s);
 	    }
-	    revPath.add(s); // The starting state, since the BFS solve() method doesn't ever add the first start state to pred
+	    revPath.add(s);
 
 	    for (int i = 0; i < revPath.size(); i++) {
 	        System.out.printf("%3d %s%n", i, revPath.get(revPath.size() - 1 - i));
@@ -161,7 +161,7 @@ public class Flip_Five {
 		char[][] flipBoard;
 		
 		/**
-		 * Instantiates a board with a given 3x3 configuration of chars
+		 * Instantiates a board with a configuration 3x3 chars
 		 * @param fb
 		 */
 		public State(char[][] fb)

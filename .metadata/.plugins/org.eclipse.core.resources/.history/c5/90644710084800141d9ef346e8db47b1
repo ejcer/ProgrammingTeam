@@ -161,7 +161,7 @@ public class Flip_Five {
 		char[][] flipBoard;
 		
 		/**
-		 * Instantiates a board with a given 3x3 configuration of chars
+		 * Instantiates a board with a configuration 3x3 chars
 		 * @param fb
 		 */
 		public State(char[][] fb)
