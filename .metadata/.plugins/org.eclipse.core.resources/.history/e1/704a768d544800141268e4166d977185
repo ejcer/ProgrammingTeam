@@ -264,7 +264,9 @@ public class Flip_Five {
 		}
 		
 		/**
-		 * Creates a unique integer identifier for each permutation of a flipboard
+		 * no idea how to do this in general ===========================================================================
+		 * my current stab at it
+		 * update this description once you get it
 		 */
 		public int hashCode()
 		{
@@ -275,7 +277,7 @@ public class Flip_Five {
 			{
 				for(int j = 0; j < 3; j++)
 				{
-					count += mult * hash(flipBoard[i][j]); 
+					count += mult * hash(flipBoard[i][j]);
 					mult *= 2;
 				}
 			}
