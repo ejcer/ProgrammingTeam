@@ -1,0 +1,6 @@
+import java.util.Comparator;
+
+
+public class StringComparator<T> implements Comparator<? super String> {
+
+}
