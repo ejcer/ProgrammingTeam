@@ -1,0 +1,108 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+
+/**
+ * Codeforces.com 
+ * Round # 
+ * Division 2
+ * Problem D
+ * @author Edward McEnrue
+ */
+public class Round_Robin {
+
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		while(true)
+		{
+			int n = in.nextInt(); //number of players
+			if(n == 0)
+			{
+				break;
+			}
+			
+			int t = in.nextInt(); //number of turns per round
+			
+			//output the number of players left, and their score
+			
+			int[] pl = new int[n];
+			for(int i = 0; i < n; i++)
+			{
+				pl[i] = 0;
+			}
+			boolean go = true; //might not always be the case that it's runnable
+			while(go)
+			{
+				for(int j = t; t >= 0; t--)
+				{
+					for(int i = 0; i < n; i++)
+					{
+						int noGo = 0;
+						if(pl[i] == -1)
+						{
+							noGo++;
+							continue;
+						}
+						else
+						{
+							pl[i]++;
+						}
+						if(noGo == n)
+							go = false;
+					}
+					//The last player
+					int tlp = t%n;
+				}
+			}
+		}
+
+	}
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}

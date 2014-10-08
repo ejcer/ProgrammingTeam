@@ -99,11 +99,10 @@ public class Flip_Five {
 	        if (s.isFinal()) {
 	        	
 	        	//I don't think this if statement is necessary
-	        	if(n < min) //=========ADDED4FLIPFIVE==========
-	        	{
+	        	
 	        		min = n;
 	        		//output(n, s, pred); //=========UNUSED4FLIPFIVE==========
-	        	}
+	        	
 	        	break;
 	        }
 
