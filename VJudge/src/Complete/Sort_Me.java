@@ -97,8 +97,6 @@ public class Sort_Me {
 			// positive if s1 is after s2
 			return s1.length()-s2.length(); 
 		}
-		
-		
 	}
 
 	// -----------MyScanner class for faster input----------

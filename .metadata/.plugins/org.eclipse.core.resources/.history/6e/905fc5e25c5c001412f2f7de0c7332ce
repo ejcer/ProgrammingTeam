@@ -1,0 +1,136 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+
+/**
+ * Codeforces.com 
+ * Round ICPC ACM 
+ * Division 2
+ * Problem F
+ * @author Edward McEnrue
+ */
+public class SuperPhyllis {
+
+	static HashMap<Node, ArrayList<Node>> graph = new HashMap<Node, ArrayList<Node>>();
+	
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int m = in.nextInt();
+		while(true){
+			if(m == 0) break;
+			ArrayList<String> allNodes = new ArrayList<String>();
+			for(int z = 0; z < m; z++){
+				//=======Constructs the graph=======
+				String sn1 = in.next();
+				Node n1 = new Node(sn1);
+				String sn2 = in.next();
+				Node n2 = new Node(sn2);
+//				ArrayList<String> cur = graph.get(n1);
+//				if(cur == null){
+//					cur = new ArrayList<String>();
+//					cur.add(n2);
+//					graph.put(n1, cur);
+//					allNodes.add(n1); //List of all node names
+//				}else{
+//					cur.add(n2);
+//					graph.put(n1, cur);
+//				}//=================================
+			}
+			
+			//Go through each node and get an adjacency
+			for(String n : allNodes){
+				
+			}
+			
+			
+			
+			m = in.nextInt();
+			
+		}	
+	}
+	
+	/** BFS Skeleton.
+	 * Assumes that 'State' implements equals() and hashCode()
+	 * according to contract.
+	 * State must also provide 'isfinal', and 'successors' methods
+	 */
+	static void solve(Node start) {
+	    //Add visited to a hashset
+	}
+	
+	public static class Node{
+		ArrayList<Node> adj;
+		String name;
+		
+		public Node(String s){
+			this.name = s;
+		}
+		public void addNode(Node n){
+			adj.add(n);
+		}
+	}
+	
+	public static class Pair{
+		String n1;
+		String n2;
+		public Pair(String n1, String n2){
+			this.n1 = n1;
+			this.n2 = n2;
+		}
+	}
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}

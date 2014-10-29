@@ -1,0 +1,165 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+
+/**
+ * Codeforces.com 
+ * Round ICPC ACM 
+ * Division 2
+ * Problem F
+ * @author Edward McEnrue
+ */
+public class SuperPhyllis {
+
+	static HashMap<String, ArrayList<String>> graph = new HashMap<String, ArrayList<String>>();
+	
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int m = in.nextInt();
+		while(true){
+			if(m == 0) break;
+			for(int z = 0; z < m; z++){
+				String n1 = in.next();
+				String n2 = in.next();
+				ArrayList<String> cur = graph.get(n1);
+				if(cur == null){
+					cur = new ArrayList<String>();
+					cur.add(n2);
+					graph.put(n1, cur);
+				}else{
+					
+				}
+			}
+			m = in.nextInt();
+			
+		}	
+	}
+	/**
+	 * Removes a specific adjacency from the current node<String>
+	 */
+	public static void remove(String cur, String adj){
+		ArrayList<String> adjs = graph.get(cur);
+		for(int i = 0; i < adjs.size(); i++){
+			if(adjs.get(i).equals(adj))
+				adjs.remove(i);
+		}
+	}
+	
+	/** BFS Skeleton.
+	 * Assumes that 'State' implements equals() and hashCode()
+	 * according to contract.
+	 * State must also provide 'isfinal', and 'successors' methods
+	 */
+	void solve(State start) {
+	    Set<State> visited = new HashSet<State>();                  
+	    // has this state been visited?
+	    Map<State, State> pred = new HashMap<State, State>();       
+	    // predecessor on the shortest path to the start state
+	    Map<State, Integer> dist = new HashMap<State, Integer>();   
+	    // shortest distance to start state
+	    Deque<State> bfs = new ArrayDeque<State>();  // BFS queue
+	    bfs.offer(start);
+	    dist.put(start, 0);
+
+	    while (bfs.size() > 0) {
+	        State s = bfs.poll();
+	        int n = dist.get(s);
+	        visited.add(s);
+
+	        if (s.isFinal()) {
+	            //output(n, s, pred);
+	            return;
+	        }
+
+	        for (State succ : s.successors()) {
+	            if (visited.contains(succ))
+	                continue;
+
+	            if (!pred.containsKey(succ))
+	                pred.put(succ, s);
+
+	            if (!dist.containsKey(succ)) {
+	                dist.put(succ, n+1);
+	                bfs.offer(succ);
+	            }
+	        }
+	    }
+	}
+	
+	public static class State{
+		Node curNode;
+		
+		public State(Node cur){
+			this.curNode = cur;
+		}
+		
+		public boolean isFinal(){
+			
+			
+			return false;
+		}
+	}
+	
+	public class Node{
+		ArrayList<Node> adj;
+		
+		public Node(ArrayList<Node> adj){
+			this.adj = adj;
+		}
+	}
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}

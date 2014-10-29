@@ -27,6 +27,8 @@ public class Cash_Cow {
 			return value;
 		}
 	}
+	
+	
 	static Color[][] board;
 	public static void main(String[] args) {
 		MyScanner in = new MyScanner();
