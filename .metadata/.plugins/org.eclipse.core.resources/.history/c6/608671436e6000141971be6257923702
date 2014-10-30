@@ -80,12 +80,11 @@ public class SuperPhyllis {
 			
 			while(!bfs.isEmpty()){
 				Node orig = bfs.poll();
-				visited.add(orig);
-				for(Node node: graph.get(orig)){ //add all adjacencies to the head of the bfs
-					if(!visited.contains(node))
+				for(Node nodes: graph.get(orig)){ //add all adjacencies to the head of the bfs
 					
 					
-					bfs.add(node);
+					
+					bfs.add(nodes);
 				}
 				
 				
