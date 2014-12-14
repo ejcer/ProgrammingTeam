@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Regional2013_TextRoll&apos; to &apos;TextRoll&apos;&#x0D;&#x0A;- Original project: &apos;ICPCLiveArchive&apos;&#x0D;&#x0A;- Original element: &apos;Regional2013_TextRoll&apos;&#x0D;&#x0A;- Renamed element: &apos;TextRoll&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Regional2013_TextRoll&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Regional2013_TextRoll.java[Regional2013_TextRoll" matchStrategy="1" name="TextRoll" qualified="false" references="true" similarDeclarations="false" stamp="1407454320605" textual="false" version="1.0"/>
+</session>
