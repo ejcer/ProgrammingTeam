@@ -13,8 +13,11 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Python$CF301_Combination_Lock.coverage" NAME="CF301_Combination_Lock Coverage Results" MODIFIED="1431633370253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CodeForces" />
-    <SUITE FILE_PATH="coverage/Python$CF301_School_Marks.coverage" NAME="CF301_School_Marks Coverage Results" MODIFIED="1431639975534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CodeForces" />
+    <SUITE FILE_PATH="coverage/Python$CF301_School_Marks.coverage" NAME="CF301_School_Marks Coverage Results" MODIFIED="1431805018680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CodeForces" />
+    <SUITE FILE_PATH="coverage/Python$CF302_Sea_and_Islands.coverage" NAME="CF302_Sea_and_Islands Coverage Results" MODIFIED="1431822273867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CodeForces" />
+    <SUITE FILE_PATH="coverage/Python$CF301_Ice_Cave.coverage" NAME="CF301_Ice_Cave Coverage Results" MODIFIED="1431834418800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CodeForces" />
     <SUITE FILE_PATH="coverage/Python$CF280_Vanya_and_Cubes.coverage" NAME="CF280_Vanya_and_Cubes Coverage Results" MODIFIED="1431619559293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CodeForces" />
+    <SUITE FILE_PATH="coverage/Python$CF302_Set_Of_Strings.coverage" NAME="CF302_Set_Of_Strings Coverage Results" MODIFIED="1431818945024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CodeForces" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -28,19 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CF301_School_Marks.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CodeForces/CF301_School_Marks.py">
+      <file leaf-file-name="CF301_Ice_Cave.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CodeForces/CF301_Ice_Cave.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="11" selection-start="51" selection-end="51" vertical-scroll-proportion="0.14366198" vertical-offset="0" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CF301_Combination_Lock.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CodeForces/CF301_Combination_Lock.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="34" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="374">
+            <state line="16" column="47" selection-start="481" selection-end="481" vertical-scroll-proportion="0.47887325" vertical-offset="102" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
@@ -58,6 +52,9 @@
       <list>
         <option value="$PROJECT_DIR$/CodeForces/CF301_Combination_Lock.py" />
         <option value="$PROJECT_DIR$/CodeForces/CF301_School_Marks.py" />
+        <option value="$PROJECT_DIR$/CodeForces/CF302_Set_Of_Strings.py" />
+        <option value="$PROJECT_DIR$/CodeForces/CF302_Sea_and_Islands.py" />
+        <option value="$PROJECT_DIR$/CodeForces/CF301_Ice_Cave.py" />
       </list>
     </option>
   </component>
@@ -140,13 +137,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -158,26 +155,7 @@
       <recent name="C:\WorkspaceAll\ProgrammingTeam\Python\CodeForces\Completed" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CF301_School_Marks">
-    <configuration default="false" name="CF280_Vanya_and_Cubes" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CodeForces" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\WorkspaceAll\ProgrammingTeam\Python\CodeForces\Completed\CF280_Vanya_and_Cubes.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.CF301_Ice_Cave">
     <configuration default="false" name="CF301_Combination_Lock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -211,6 +189,63 @@
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CodeForces/CF301_School_Marks.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CF302_Set_Of_Strings" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CodeForces" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CodeForces/CF302_Set_Of_Strings.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CF302_Sea_and_Islands" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CodeForces" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CodeForces/CF302_Sea_and_Islands.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CF301_Ice_Cave" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CodeForces" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CodeForces/CF301_Ice_Cave.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -300,9 +335,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -324,6 +356,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -366,16 +401,20 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.CF280_Vanya_and_Cubes" />
-      <item index="1" class="java.lang.String" itemvalue="Python.CF301_Combination_Lock" />
-      <item index="2" class="java.lang.String" itemvalue="Python.CF301_School_Marks" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.CF301_Combination_Lock" />
+      <item index="1" class="java.lang.String" itemvalue="Python.CF301_School_Marks" />
+      <item index="2" class="java.lang.String" itemvalue="Python.CF302_Set_Of_Strings" />
+      <item index="3" class="java.lang.String" itemvalue="Python.CF302_Sea_and_Islands" />
+      <item index="4" class="java.lang.String" itemvalue="Python.CF301_Ice_Cave" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.CF301_School_Marks" />
-        <item index="1" class="java.lang.String" itemvalue="Python.CF301_Combination_Lock" />
-        <item index="2" class="java.lang.String" itemvalue="Python.CF280_Vanya_and_Cubes" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.CF301_Ice_Cave" />
+        <item index="1" class="java.lang.String" itemvalue="Python.CF302_Sea_and_Islands" />
+        <item index="2" class="java.lang.String" itemvalue="Python.CF302_Set_Of_Strings" />
+        <item index="3" class="java.lang.String" itemvalue="Python.CF301_School_Marks" />
+        <item index="4" class="java.lang.String" itemvalue="Python.CF301_Combination_Lock" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +446,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="683" y="0" width="683" height="728" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -418,7 +457,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33558178" sideWeight="0.35832083" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33558178" sideWeight="0.64167917" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33558178" sideWeight="0.64167917" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -441,6 +480,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CodeForces/CF301_Combination_Lock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="34" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CodeForces/CF301_School_Marks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="0" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="1037">
@@ -503,16 +549,39 @@
         <state line="7" column="7" selection-start="75" selection-end="75" vertical-scroll-proportion="0.30591258" vertical-offset="0" max-vertical-offset="389" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodeForces/CF301_Combination_Lock.py">
+    <entry file="file://$PROJECT_DIR$/CodeForces/CF301_School_Marks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+        <state line="5" column="12" selection-start="116" selection-end="116" vertical-scroll-proportion="0.23943663" vertical-offset="0" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CodeForces/CF301_School_Marks.py">
+    <entry file="file://$PROJECT_DIR$/CodeForces/CF301_Combination_Lock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="51" selection-end="51" vertical-scroll-proportion="0.14366198" vertical-offset="0" max-vertical-offset="884">
+        <state line="2" column="34" selection-start="81" selection-end="81" vertical-scroll-proportion="0.07608695" vertical-offset="6" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeForces/CF302_Set_Of_Strings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="372" selection-end="372" vertical-scroll-proportion="0.39945653" vertical-offset="261" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeForces/CF302_Sea_and_Islands.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="16" selection-start="539" selection-end="539" vertical-scroll-proportion="0.4918478" vertical-offset="125" max-vertical-offset="867">
+          <folding>
+            <element signature="e#24#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeForces/CF301_Ice_Cave.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="47" selection-start="481" selection-end="481" vertical-scroll-proportion="0.47887325" vertical-offset="102" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
