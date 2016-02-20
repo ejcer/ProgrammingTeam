@@ -1,0 +1,115 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.StringTokenizer;
+
+
+
+
+public class PhoneNumberWords {
+	
+	static String[] mapping = new String[] {
+	    "",
+	    "",
+	    "abc",
+	    "def",
+	    "ghi",
+	    "jkl",
+	    "mno",
+	    "prqs",
+	    "tuv",
+	    "wxyz",
+	};
+	
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int number = in.nextInt();
+		
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+		
+		while(number > 0){
+			nums.add(number%10);
+			number /=10;
+		}
+		
+		Collections.reverse(nums);
+		System.out.println(nums.toString());
+		
+	}
+	
+	public static void solve(ArrayList<Integer> nums, LinkedList<Character> word, int startNumber){
+		if(word.size() == nums.size()){
+			printLinkedList(word);
+		}
+		
+		//mapping[nums.get(startNumber)] //letters/string of the number
+		for(int i = 0; i < mapping[nums.get(startNumber)].length(); i++){//for each letter of the number_string
+			word.addLast(mapping[nums.get(startNumber)].charAt(i)); //add the letter
+			
+			for(int j = startNumber+1; j < nums.size(); j++){ //move the startNumber index forward to the next number_string in the sequence
+				solve(nums, word, j);
+			}
+			word.removeLast();//remove the last character from the word, since it will be printed if it hits the base case
+		}
+	}
+	
+	public static void printLinkedList(LinkedList<Character> word){
+		StringBuilder sb = new StringBuilder();
+		for(char ch : word){
+			sb.append(ch);
+		}
+		System.out.println(sb.toString());
+	}
+	
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}

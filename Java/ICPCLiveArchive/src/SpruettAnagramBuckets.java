@@ -1,0 +1,103 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+
+
+public class SpruettAnagramBuckets {
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int n = in.nextInt();
+		
+		String[] words = new String[n];
+		for(int i = 0; i < n; i++){
+			words[i] = in.nextLine();
+		}
+
+		Arrays.sort(words);
+		
+		
+		//sort each word
+		//keep a pointer to each word
+		//sort the word
+		//if the sorted word hashes to something in the map, then get the value of stringbuilder for that hashmap and put the stuff there
+		
+		HashMap<String, StringBuilder> hm = new HashMap<String, StringBuilder>();
+		
+		for(int i = 0; i < n; i++){
+			String w = words[i];
+			char[] chArr = words[i].toCharArray();
+			Arrays.sort(chArr);
+			String sortedW = new String(chArr);
+			if(hm.containsKey(sortedW)){
+				hm.get(sortedW).append(w);
+			}else{
+				hm.put(sortedW, new StringBuilder().append(w));
+			}
+			
+		}
+		
+		ArrayList<String> strs = new ArrayList<String>();
+		
+		for(String key: hm.keySet()){
+			strs.add(hm.get(key).toString());
+		}
+		Collections.sort(strs);
+		
+		for(String str: strs){
+			System.out.println(str);
+		}
+		
+	}
+
+	// -----------MyScanner class for faster input----------
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+
+	}
+	// --------------------------------------------------------
+}

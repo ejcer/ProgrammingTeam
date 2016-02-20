@@ -1,0 +1,174 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
+
+
+public class BreadFirstSearch {
+	
+	public static void main(String[] args) {
+		MyScanner in = new MyScanner();
+		
+		int n = in.nextInt();
+		int p = in.nextInt();
+		
+		
+		Point[] points = new Point[n+2];
+		
+
+		points[0] = new Point(0, 0);
+		for(int i = 1; i < n+1; i++){
+			points[i] = new Point(in.nextInt(), in.nextInt());
+		}
+		points[n+1] = new Point(0, 0);
+		
+		
+		HashMap<Integer, Node> graph = new HashMap<Integer, Node>();
+		
+		for(int i = 0; i < n+2; i++){
+			graph.put(i, new Node(i, points[i]));
+		}
+		
+		for(int i = 0; i < n+2; i++){
+			Node cur = graph.get(i);
+			for(int j = i+1; j < n+2; j++){
+				cur.neighbors.add(graph.get(j));
+			}
+		}
+		
+		System.out.println(shortestPath(graph.get(0), graph, p));
+	}
+	
+	public static double shortestPath(Node startingNode, HashMap<Integer, Node> graph, double multiplier){
+		
+		HashSet<Node> visitedSet = new HashSet<Node>();
+		
+		PriorityQueue<Node> pQueue = new PriorityQueue<Node>();
+		startingNode.weight = 0;
+		pQueue.add(startingNode);
+		
+		while(!pQueue.isEmpty()){
+			Node cur = pQueue.poll();
+			visitedSet.add(cur);
+			
+			for(Node adj: cur.neighbors){
+				if(!visitedSet.contains(adj)){
+					if(adj.weight >= cur.weight + nodeDistance(cur, adj, multiplier, graph.size())){
+						adj.weight = cur.weight + nodeDistance(cur, adj, multiplier, graph.size());
+						
+						pQueue.add(adj);
+					}
+				}
+			}
+			for(Node adj: cur.neighbors){
+				System.out.println("id: "+ adj.id + " weight: "+adj.weight);
+			}
+		}
+		
+		return graph.get(graph.keySet().size()-1).weight;
+	}
+	
+	public static double distance(Point p1, Point p2){
+		return Math.sqrt( Math.pow( (p2.x - p1.x), 2) + Math.pow( (p2.y-p1.y), 2) );
+	}
+	
+	public static double nodeDistance(Node n1, Node n2, double p, int graphSize){
+		double penaltyIncurred = ((n2.id - n1.id) - 1)*p;
+		return penaltyIncurred+distance(n1.location, n2.location);
+	}
+	
+	public static class Node implements Comparable{
+		int id;
+		Point location;
+		ArrayList<Node> neighbors;
+		double weight;
+		
+		public Node(int id, Point location){
+			this.id = id;
+			this.location = location;
+			neighbors = new ArrayList<Node>();
+			weight = Double.MAX_VALUE;
+		}
+		
+		@Override
+		public boolean equals(Object obj) {
+			return this.id == ((Node) obj).id;
+		}
+
+		@Override
+		public int hashCode() {
+			return id;
+		}
+
+		@Override
+		public int compareTo(Object that) {
+			return (int) (this.weight - ((Node) that).weight);
+		}
+	}
+	
+	
+	
+	public static class Point{
+		int x;
+		int y;
+		public Point(int x, int y){
+			this.x = x;
+			this.y = y;
+		}
+		
+		@Override
+		public String toString(){
+			return "("+this.x+", "+this.y+")";
+		}
+	}
+	
+	// -----------MyScanner class for faster input----------
+		public static class MyScanner {
+			BufferedReader br;
+			StringTokenizer st;
+
+			public MyScanner() {
+				br = new BufferedReader(new InputStreamReader(System.in));
+			}
+
+			String next() {
+				while (st == null || !st.hasMoreElements()) {
+					try {
+						st = new StringTokenizer(br.readLine());
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				return st.nextToken();
+			}
+
+			int nextInt() {
+				return Integer.parseInt(next());
+			}
+
+			long nextLong() {
+				return Long.parseLong(next());
+			}
+
+			double nextDouble() {
+				return Double.parseDouble(next());
+			}
+
+			String nextLine() {
+				String str = "";
+				try {
+					str = br.readLine();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				return str;
+			}
+
+		}
+		// --------------------------------------------------------
+}

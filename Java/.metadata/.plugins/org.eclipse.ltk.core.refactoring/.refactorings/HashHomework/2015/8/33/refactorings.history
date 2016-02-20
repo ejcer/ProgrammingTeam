@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;employeeNum&apos; in &apos;CF267_Fedor_and_New_Game.findTeams(...)&apos; to &apos;curNum&apos;&#x0D;&#x0A;- Original project: &apos;HashHomework&apos;&#x0D;&#x0A;- Original element: &apos;CF267_Fedor_and_New_Game.findTeams(Employee[], ArrayList&lt;Integer&gt;, ArrayList&lt;Integer&gt;, int, int).employeeNum&apos;&#x0D;&#x0A;- Renamed element: &apos;employeeNum&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;employeeNum&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{CF267_Fedor_and_New_Game.java[CF267_Fedor_and_New_Game~findTeams~\[QEmployee;~QArrayList\&lt;QInteger;&gt;;~QArrayList\&lt;QInteger;&gt;;~I~I@employeeNum!990!1004!994!1004!I!0!true" name="curNum" references="true" stamp="1439080482282" version="1.0"/>
+</session>

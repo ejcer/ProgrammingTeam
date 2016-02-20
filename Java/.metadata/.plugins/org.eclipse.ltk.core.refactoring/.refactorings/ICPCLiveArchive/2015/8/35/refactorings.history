@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;k&apos; in &apos;Word_Search.main(...)&apos; to &apos;wordCount&apos;&#x0D;&#x0A;- Original project: &apos;ICPCLiveArchive&apos;&#x0D;&#x0A;- Original element: &apos;Word_Search.main(String[]).k&apos;&#x0D;&#x0A;- Renamed element: &apos;k&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;k&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Word_Search.java[Word_Search~main~\[QString;@k!353!373!357!357!I!0!false" name="wordCount" references="true" stamp="1440365761430" version="1.0"/>
+</session>

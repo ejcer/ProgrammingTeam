@@ -2,6 +2,7 @@ package Utilities;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
@@ -22,7 +23,6 @@ public class IO_Template {
 	public static class MyScanner {
 		BufferedReader br;
 		StringTokenizer st;
-
 		public MyScanner() {
 			br = new BufferedReader(new InputStreamReader(System.in));
 		}

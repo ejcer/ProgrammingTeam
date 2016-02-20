@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;right&apos; in &apos;testing.merge(...)&apos; to &apos;mid&apos;&#x0D;&#x0A;- Original project: &apos;ICPCLiveArchive&apos;&#x0D;&#x0A;- Original element: &apos;testing.merge(Comparable[], Comparable[], int, int, int).right&apos;&#x0D;&#x0A;- Renamed element: &apos;right&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;right&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{testing.java[testing~merge~\[QComparable;~\[QComparable;~I~I~I@right!1198!1206!1202!1206!I!0!true" name="mid" references="true" stamp="1442508498569" version="1.0"/>
+</session>
